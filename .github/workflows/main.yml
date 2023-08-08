@@ -1,0 +1,8 @@
+name: Sync Github Commit to Notion
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Sync your commits to Notion
+
