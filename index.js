@@ -1,5 +1,6 @@
 import {NotionService} from "./src/services/notion.service.js";
 import 'dotenv/config'
+// core GitHub
 
 const secret = process.env.NOTION_SECRET;
 const database = process.env.DATABASE_ID;
