@@ -5,6 +5,8 @@ import Octokit from "@octokit/core";
 
 function main() {
 
+    console.log(Github.context.payload.commits);
+
     // try {
     //     const notion = new NotionService(secret, database);
     //     notion.addItem({
@@ -20,4 +22,4 @@ function main() {
     // }
 }
 
-console.log("running");
+main();
