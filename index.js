@@ -5,11 +5,6 @@ import Octokit from "@octokit/core";
 
 function main() {
 
-    const notion = NotionService
-    const core = Core
-    const github = Github
-    const octokit = Octokit
-
     // try {
     //     const notion = new NotionService(secret, database);
     //     notion.addItem({
