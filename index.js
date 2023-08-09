@@ -1,7 +1,6 @@
 import {NotionService} from "./src/services/notion.service.js";
 import Core from "@actions/core";
 import Github from "@actions/github";
-import Octokit from "@octokit/core";
 
 function main() {
     try {

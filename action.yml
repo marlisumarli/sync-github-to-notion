@@ -3,15 +3,6 @@ description: 'Sync your commits to Notion'
 branding:
   icon: 'refresh-cw'
   color: 'white'
-inputs:
-  notion_secret:
-    description: 'Notion Secret retrieved from My Integrations on notion.so/my-integrations'
-    required: true
-  notion_database:
-    description: 'the id of the database you want to save the commits'
-    required: true
-  token:
-    description: "Create a personal access token on GitHub for the GitHub Api"
 runs:
   using: 'node16'
   main: './index.js'
