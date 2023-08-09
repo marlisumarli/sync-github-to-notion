@@ -23,3 +23,4 @@ function main() {
 }
 
 main();
+console.log("Test");
