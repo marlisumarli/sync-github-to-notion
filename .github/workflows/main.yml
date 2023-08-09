@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Sync Github Commit to Notion
         id: notion-sync-commit
-        uses: marlisumarli/sync-github-to-notion@1.0.0
+        uses: marlisumarli/sync-github-to-notion@main
         with:
           notion_secret: ${{ secrets.NOTION_SECRET }}
           notion_database: ${{ secrets.NOTION_DATABASE }}
