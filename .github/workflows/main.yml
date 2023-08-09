@@ -10,4 +10,4 @@ jobs:
         uses: marlisumarli/sync-github-to-notion@1.0.0
         with:
           notion_secret: ${{ secrets.NOTION_SECRET }}
-          database_id: ${{ secrets.NOTION_DATABASE }}
+          database_id: ${{ secrets.DATABASE_ID }}
