@@ -4,21 +4,33 @@ import Github from "@actions/github";
 import Octokit from "@octokit/core";
 
 function main() {
-
-
     try {
-        console.log(Github.context.payload.commits);
-        // const notion = new NotionService(secret, database);
-        // notion.addItem({
-        //     commitTittle: "Asd",
-        //     commitDescription: "Dsa",
-        //     commitBy: "Marleess",
-        //     commitUrl: "https://www.postman.com/notionhq/workspace/notion-s-api-workspace/request/15568543-a027e2d4-11f2-4068-a82c-cb9fb8562036",
-        //     project: "coba-project",
-        //     commitId: "123"
-        // });
-    } catch (error) {
 
+        const commits = Github.context.payload.commits;
+        const secret = Core.getInput('notion_secret');
+        const database = Core.getInput('notion_database');
+
+        commits.forEach((commit) => {
+            const array = commit.message.split(/\r?\n/);
+            const title = array.shift();
+
+            let description = "";
+            array.forEach((element) => {
+                description += " " + element;
+            });
+
+            const notion = new NotionService(secret, database);
+            notion.addItem({
+                commitTittle: title,
+                commitDescription: description,
+                commitBy: commit.author.name,
+                commitUrl: commit.url,
+                project: Github.context.repo.repo,
+                commitId: commit.id
+            });
+        });
+    } catch (error) {
+        console.error(error);
     }
 }
 
