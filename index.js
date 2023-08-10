@@ -1,4 +1,4 @@
-import {NotionService} from "./src/services/notion.service.js";
+import {NotionApi} from "./app/notion-api.js";
 import Core from "@actions/core";
 import Github from "@actions/github";
 
@@ -18,7 +18,7 @@ function main() {
                 description += " " + element;
             });
 
-            const notion = new NotionService(secret, database);
+            const notion = new NotionApi(secret, database);
             notion.addItem({
                 commitTittle: title,
                 commitDescription: description,

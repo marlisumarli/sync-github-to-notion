@@ -1,6 +1,6 @@
 import {Client} from "@notionhq/client";
 
-export class NotionService {
+export class NotionApi {
     notion;
     databaseId;
 

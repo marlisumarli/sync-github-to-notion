@@ -13,24 +13,24 @@ This action reference from [alessandrobelli/NotionHook](https://github.com/aless
     3. Click button  ****************************************New repository secret**************************************** .
     4. And paste your Internal Integration Token.
 
-       ![Action Secret Repository Github](assets/images/img-1.png)
+       ![Action Secret Repository Github](assets/image/img-1.png)
 
 3. [You need to create a new Notion Database that looks like this, or just duplicate this.](https://www.notion.so/23b7ce418ca44be3866ef72cab6a80cc?pvs=21)
 4. Connect page to **********************Github**********************
     1. Select the menu in the top right corner.
 
-       ![Add Connections](assets/images/img-2.png)
+       ![Add Connections](assets/image/img-2.png)
 
     2. Select **Add Connection** and choose **********************Sync Github**********************
 5. Navigate to your Notion database in a browser and get the Database Id and copy.
 
-   ![Copy Database ID](assets/images/img-3.png)
+   ![Copy Database ID](assets/image/img-3.png)
 
 6. Create a new Repository secret for `NOTION_DATABASE`, the same way as number 2.
 7. Create **yaml** file in directory **************.github/workflows/main.yml************** on your porject.
     1. Like this
 
-       ![Workflow Directory](assets/images/img-4.png)
+       ![Workflow Directory](assets/image/img-4.png)
 
     2. Copy this and paste it in **main.yml**
 
