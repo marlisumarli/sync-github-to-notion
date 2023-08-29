@@ -4,10 +4,9 @@ import {NotionApi} from "./app/notion-api.js";
 
 async function main() {
     try {
-
-        const commits = Github.context.payload.commits;
         const secret = Core.getInput('notion_secret');
         const database = Core.getInput('notion_database');
+        const commits = Github.context.payload.commits;
 
         commits.forEach((commit) => {
             const array = commit.message.split(/\r?\n/);
