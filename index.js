@@ -27,7 +27,8 @@ async function main() {
                 commitId: commit.id
             });
         });
-        console.log(Github.context.repo);
+        console.log(Github.context.payload.repository);
+        console.log(Github.context.payload.installation);
     } catch (error) {
         Core.setFailed(`Error: ${error.message}`);
     }
