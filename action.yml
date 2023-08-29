@@ -22,7 +22,7 @@ inputs:
     required: true
     default: Commit By
   commit_branch:
-    description: Branch name
+    description: Branch header
     default: Branch
     required: true
   project:
