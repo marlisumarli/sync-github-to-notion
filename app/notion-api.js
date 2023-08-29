@@ -1,4 +1,5 @@
 import {Client} from "@notionhq/client";
+import Core from "@actions/core";
 
 export class NotionApi {
     notion;
@@ -70,7 +71,7 @@ export class NotionApi {
             console.log(response);
             console.log("Success! Entry added.");
         } catch (error) {
-            console.error(error.body);
+            Core.setFailed(`Error: ${error.body}`);
         }
     }
 }
