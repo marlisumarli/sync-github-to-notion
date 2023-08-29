@@ -14,7 +14,7 @@ async function main() {
 
             let description = "";
             array.forEach((element) => {
-                description += " " + element;
+                description += element;
             });
 
             const notion = new NotionApi(secret, database);
