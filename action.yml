@@ -12,7 +12,6 @@ inputs:
     required: true
   branch:
     description: Branch name
-    required: true
   commit_description:
     description: Description
     required: true
