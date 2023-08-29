@@ -27,53 +27,53 @@ export class NotionApi {
                             }
                         ]
                     },
-                    [Core.getInput('commit_description')]: {
-                        rich_text: [
-                            {
-                                type: "text",
-                                text: {
-                                    content: commitDescription,
-                                },
-                            },
-                        ],
-                    },
-                    [Core.getInput('commit_by')]: {
-                        type: "select",
-                        select: [
-                            {
-                                name: commitBy
-                            }
-                        ]
-                    },
-                    [Core.getInput('branch')]: {
-                        type: "select",
-                        select: [
-                            {
-                                name: branch
-                            }
-                        ]
-                    },
-                    [Core.getInput('commit_url')]: {
-                        url: commitUrl
-                    },
-                    [Core.getInput('project')]: {
-                        type: "multi_select",
-                        multi_select: [
-                            {
-                                name: project
-                            }
-                        ]
-                    },
-                    [Core.getInput('commit_id')]: {
-                        rich_text: [
-                            {
-                                type: "text",
-                                text: {
-                                    content: commitId,
-                                },
-                            },
-                        ],
-                    }
+                    // [Core.getInput('commit_description')]: {
+                    //     rich_text: [
+                    //         {
+                    //             type: "text",
+                    //             text: {
+                    //                 content: commitDescription,
+                    //             },
+                    //         },
+                    //     ],
+                    // },
+                    // [Core.getInput('commit_by')]: {
+                    //     type: "select",
+                    //     select: [
+                    //         {
+                    //             name: commitBy
+                    //         }
+                    //     ]
+                    // },
+                    // [Core.getInput('branch')]: {
+                    //     type: "select",
+                    //     select: [
+                    //         {
+                    //             name: branch
+                    //         }
+                    //     ]
+                    // },
+                    // [Core.getInput('commit_url')]: {
+                    //     url: commitUrl
+                    // },
+                    // [Core.getInput('project')]: {
+                    //     type: "multi_select",
+                    //     multi_select: [
+                    //         {
+                    //             name: project
+                    //         }
+                    //     ]
+                    // },
+                    // [Core.getInput('commit_id')]: {
+                    //     rich_text: [
+                    //         {
+                    //             type: "text",
+                    //             text: {
+                    //                 content: commitId,
+                    //             },
+                    //         },
+                    //     ],
+                    // }
                 },
             });
         } catch (error) {
