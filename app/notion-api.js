@@ -43,12 +43,12 @@ export class NotionApi {
                             name: commitBy
                         }
                     },
-                    // [Core.getInput('commit_branch')]: {
-                    //     type: "select",
-                    //     select: {
-                    //         name: branch
-                    //     }
-                    // },
+                    [Core.getInput('commit_branch')]: {
+                        type: "select",
+                        select: {
+                            name: branch
+                        }
+                    },
                     [Core.getInput('commit_url')]: {
                         url: commitUrl
                     },

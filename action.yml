@@ -24,6 +24,10 @@ inputs:
     description: Branch header
     required: true
     default: Branch
+  commit_url:
+    description: Commit URL
+    required: true
+    default: Commit URL
   project:
     description: Project
     required: true
