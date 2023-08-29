@@ -27,7 +27,7 @@ async function main() {
                 commitId: commit.id
             });
         });
-        console.log(Github.context.ref);
+        console.log(Github.context.repo);
     } catch (error) {
         Core.setFailed(`Error: ${error.message}`);
     }
