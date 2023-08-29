@@ -1,4 +1,5 @@
 import {Client} from "@notionhq/client";
+import Core from "@actions/core";
 
 export class NotionApi {
     notion;
@@ -68,7 +69,7 @@ export class NotionApi {
                 },
             });
         } catch (error) {
-            return `Error: ${error}`;
+            Core.setFailed(`Error: ${error}`);
         }
     }
 }

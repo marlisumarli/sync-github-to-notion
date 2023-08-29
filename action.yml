@@ -1,14 +1,14 @@
-name: 'Sync Github Commit to Notion'
-description: 'Sync your commits to Notion'
+name: Sync Github Commit to Notion
+description: Sync your commits to Notion
 branding:
-  icon: 'refresh-cw'
-  color: 'white'
+  icon: refresh-cw
+  color: white
 inputs:
   notion_secret:
-    description: 'Notion secret is required'
+    description: Notion secret is required
     required: true
   notion_database:
-    description: 'Notion database ID is required'
+    description: Notion database ID is required
     required: true
 runs:
   using: node16
