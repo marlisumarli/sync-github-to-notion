@@ -44,9 +44,9 @@ This action reference from [alessandrobelli/NotionHook](https://github.com/aless
             steps:
               - name: Sync Github Commit to Notion
                 id: notion-sync-commit
-                uses: marlisumarli/sync-github-to-notion@1.0.1
+                uses: marlisumarli/sync-github-to-notion@1.0.2
                 with:
                   notion_secret: ${{ secrets.NOTION_SECRET }}
                   notion_database: ${{ secrets.NOTION_DATABASE }}
-                  token: ${{ secrets.TOKEN }}
+                  branch: ${{ github.ref_name }}
         ```
