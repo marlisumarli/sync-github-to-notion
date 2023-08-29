@@ -10,8 +10,29 @@ inputs:
   notion_database:
     description: Notion database ID is required
     required: true
+  commit_title:
+    description: Title
+    required: true
+    default: Tittle
+  commit_description:
+    description: Description
+    required: true
+    default: Description
+  commit_by:
+    description: Commit By
+    required: true
+    default: Commit By
   branch:
     description: Branch name
+    default: Branch
+  project:
+    description: Title
+    required: true
+    default: Project
+  commit_id:
+    description: Title
+    required: true
+    default: Commit ID
 runs:
   using: node16
   main: index.js
