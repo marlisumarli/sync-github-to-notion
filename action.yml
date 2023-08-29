@@ -10,6 +10,9 @@ inputs:
   notion_database:
     description: Notion database ID is required
     required: true
+  branch:
+    description: Branch name
+    required: true
   commit_description:
     description: Description
     required: true
@@ -18,8 +21,9 @@ inputs:
     description: Commit By
     required: true
     default: Commit By
-  branch:
+  commit_branch:
     description: Branch name
+    default: Branch
     required: true
   project:
     description: Project
