@@ -8,26 +8,26 @@ async function main() {
         const database = Core.getInput('notion_database');
         const commits = Github.context.payload.commits;
 
-        // commits.forEach((commit) => {
-        //     const array = commit.message.split(/\r?\n/);
-        //     const title = array.shift();
-        //
-        //     let description = "";
-        //     array.forEach((element) => {
-        //         description += " " + element;
-        //     });
-        //
-        //     const notion = new NotionApi(secret, database);
-        //     notion.addItem({
-        //         commitTittle: title,
-        //         commitDescription: description,
-        //         commitBy: commit.author.name,
-        //         commitUrl: commit.url,
-        //         project: Github.context.repo.repo,
-        //         commitId: commit.id
-        //     });
-        // });
-        console.log(Core.getInput("commit_title"));
+        commits.forEach((commit) => {
+            const array = commit.message.split(/\r?\n/);
+            const title = array.shift();
+
+            let description = "";
+            array.forEach((element) => {
+                description += " " + element;
+            });
+
+            const notion = new NotionApi(secret, database);
+            notion.addItem({
+                commitTittle: title,
+                commitDescription: description,
+                commitBy: commit.author.name,
+                branch: Core.getInput('branch'),
+                commitUrl: commit.url,
+                project: Github.context.repo.repo,
+                commitId: commit.id
+            });
+        });
     } catch (error) {
         Core.setFailed(`Error: ${error.message}`);
     }

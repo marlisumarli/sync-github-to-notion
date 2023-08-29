@@ -10,14 +10,14 @@ export class NotionApi {
         this.databaseId = databaseId;
     }
 
-    async addItem({commitTittle, commitDescription, commitBy, commitUrl, project, commitId}) {
+    async addItem({commitTittle, commitDescription, commitBy, branch, commitUrl, project, commitId}) {
         try {
             return await this.notion.pages.create({
                 parent: {
                     database_id: this.databaseId
                 },
                 properties: {
-                    title: {
+                    [Core.getInput('commit_title')]: {
                         title: [
                             {
                                 type: "text",
@@ -27,7 +27,7 @@ export class NotionApi {
                             }
                         ]
                     },
-                    description: {
+                    [Core.getInput('commit_description')]: {
                         rich_text: [
                             {
                                 type: "text",
@@ -37,18 +37,26 @@ export class NotionApi {
                             },
                         ],
                     },
-                    commit_by: {
-                        type: "multi_select",
-                        multi_select: [
+                    [Core.getInput('commit_by')]: {
+                        type: "select",
+                        select: [
                             {
                                 name: commitBy
                             }
                         ]
                     },
-                    url: {
+                    [Core.getInput('branch')]: {
+                        type: "select",
+                        select: [
+                            {
+                                name: commitBy
+                            }
+                        ]
+                    },
+                    [Core.getInput('commit_url')]: {
                         url: commitUrl
                     },
-                    project: {
+                    [Core.getInput('project')]: {
                         type: "multi_select",
                         multi_select: [
                             {
@@ -56,7 +64,7 @@ export class NotionApi {
                             }
                         ]
                     },
-                    commit_id: {
+                    [Core.getInput('commit_id')]: {
                         rich_text: [
                             {
                                 type: "text",
