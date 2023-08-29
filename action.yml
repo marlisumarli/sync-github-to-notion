@@ -10,6 +10,8 @@ inputs:
   notion_database:
     description: Notion database ID is required
     required: true
+  branch:
+    description: Branch name
 runs:
   using: node16
   main: index.js
