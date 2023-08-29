@@ -1,5 +1,4 @@
 import {Client} from "@notionhq/client";
-import Core from "@actions/core";
 
 export class NotionApi {
     notion;
@@ -12,7 +11,7 @@ export class NotionApi {
 
     async addItem({commitTittle, commitDescription, commitBy, commitUrl, project, commitId}) {
         try {
-            const response = await this.notion.pages.create({
+            return await this.notion.pages.create({
                 parent: {
                     database_id: this.databaseId
                 },
@@ -68,10 +67,8 @@ export class NotionApi {
                     }
                 },
             });
-            console.log(response);
-            console.log("Success! Entry added.");
         } catch (error) {
-            Core.setFailed(`Error: ${error.body}`);
+            return `Error: ${error}`;
         }
     }
 }

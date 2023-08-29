@@ -11,4 +11,3 @@ jobs:
         with:
           notion_secret: ${{ secrets.NOTION_SECRET }}
           notion_database: ${{ secrets.NOTION_DATABASE }}
-          token: ${{ secrets.TOKEN }}
