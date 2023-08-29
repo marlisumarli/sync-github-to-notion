@@ -20,7 +20,7 @@ inputs:
     default: Commit By
   branch:
     description: Branch name
-    default: Branch
+    required: true
   project:
     description: Project
     required: true

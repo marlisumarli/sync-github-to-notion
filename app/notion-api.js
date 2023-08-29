@@ -43,7 +43,7 @@ export class NotionApi {
                             name: commitBy
                         }
                     },
-                    [Core.getInput('branch')]: {
+                    branch: {
                         type: "select",
                         select: {
                             name: branch
