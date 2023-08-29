@@ -28,7 +28,7 @@ async function main() {
         //         commitId: commit.id
         //     });
         // });
-        Core.getInput('commit_branch');
+        console.log(Core.getInput('commit_branch'));
         Core.info('Success');
     } catch (error) {
         Core.setFailed(error);
