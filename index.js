@@ -6,8 +6,8 @@ async function main() {
     try {
 
         const commits = Github.context.payload.commits;
-        const secret = Core.getInput('notion_secret');
-        const database = Core.getInput('notion_database');
+        const secret = Core.getInput('NOTION_SECRET');
+        const database = Core.getInput('NOTION_DATABASE');
 
         commits.forEach((commit) => {
             const array = commit.message.split(/\r?\n/);
