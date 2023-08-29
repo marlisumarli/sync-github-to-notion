@@ -27,16 +27,16 @@ export class NotionApi {
                             }
                         ]
                     },
-                    // [Core.getInput('commit_description')]: {
-                    //     rich_text: [
-                    //         {
-                    //             type: "text",
-                    //             text: {
-                    //                 content: commitDescription,
-                    //             },
-                    //         },
-                    //     ],
-                    // },
+                    [Core.getInput('commit_description')]: {
+                        rich_text: [
+                            {
+                                type: "text",
+                                text: {
+                                    content: commitDescription,
+                                },
+                            },
+                        ],
+                    },
                     // [Core.getInput('commit_by')]: {
                     //     type: "select",
                     //     select: [
