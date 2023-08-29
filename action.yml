@@ -10,10 +10,6 @@ inputs:
   notion_database:
     description: Notion database ID is required
     required: true
-  commit_title:
-    description: Title
-    required: true
-    default: Title
   commit_description:
     description: Description
     required: true

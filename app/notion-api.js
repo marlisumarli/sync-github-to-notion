@@ -17,7 +17,7 @@ export class NotionApi {
                     database_id: this.databaseId
                 },
                 properties: {
-                    [Core.getInput('commit_title')]: {
+                    title: {
                         title: [
                             {
                                 type: "text",
