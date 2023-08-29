@@ -32,7 +32,7 @@ function main() {
         console.log(Github.context.payload);
         console.log(commits);
     } catch (error) {
-        console.error(error);
+        Core.info(`Error : ${error}`)
     }
 }
 
