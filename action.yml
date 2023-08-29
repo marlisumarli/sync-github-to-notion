@@ -13,7 +13,7 @@ inputs:
   commit_title:
     description: Title
     required: true
-    default: Tittle
+    default: Title
   commit_description:
     description: Description
     required: true
@@ -26,11 +26,11 @@ inputs:
     description: Branch name
     default: Branch
   project:
-    description: Title
+    description: Project
     required: true
     default: Project
   commit_id:
-    description: Title
+    description: Commit ID
     required: true
     default: Commit ID
 runs:

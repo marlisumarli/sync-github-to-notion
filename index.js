@@ -19,7 +19,7 @@ async function main() {
 
             const notion = new NotionApi(secret, database);
             notion.addItem({
-                commitTittle: title,
+                commitTitle: title,
                 commitDescription: description,
                 commitBy: commit.author.name,
                 branch: Core.getInput('branch'),

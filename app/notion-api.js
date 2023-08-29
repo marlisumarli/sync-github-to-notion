@@ -10,7 +10,7 @@ export class NotionApi {
         this.databaseId = databaseId;
     }
 
-    async addItem({commitTittle, commitDescription, commitBy, branch, commitUrl, project, commitId}) {
+    async addItem({commitTittle: commitTitle, commitDescription, commitBy, branch, commitUrl, project, commitId}) {
         try {
             return await this.notion.pages.create({
                 parent: {
@@ -22,7 +22,7 @@ export class NotionApi {
                             {
                                 type: "text",
                                 text: {
-                                    content: commitTittle
+                                    content: commitTitle
                                 }
                             }
                         ]
