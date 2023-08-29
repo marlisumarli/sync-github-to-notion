@@ -77,7 +77,7 @@ export class NotionApi {
                 },
             });
         } catch (error) {
-            Core.setFailed(`Error: ${error}`);
+            Core.setFailed(`Error: ${error.message.message}`);
         }
     }
 }
