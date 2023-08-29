@@ -28,8 +28,9 @@ async function main() {
                 commitId: commit.id
             });
         });
+        Core.info('Success');
     } catch (error) {
-        Core.setFailed(`Error: ${error.message}`);
+        Core.setFailed(error);
     }
 }
 

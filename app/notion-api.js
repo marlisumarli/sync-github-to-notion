@@ -37,15 +37,12 @@ export class NotionApi {
                             },
                         ],
                     },
-                    //
-                    // [Core.getInput('commit_by')]: {
-                    //     type: "select",
-                    //     select: [
-                    //         {
-                    //             name: commitBy
-                    //         }
-                    //     ]
-                    // },
+                    [Core.getInput('commit_by')]: {
+                        type: "select",
+                        select: {
+                            name: commitBy
+                        }
+                    },
                     // [Core.getInput('branch')]: {
                     //     type: "select",
                     //     select: [
