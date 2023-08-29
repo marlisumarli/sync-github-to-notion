@@ -3,6 +3,15 @@ description: 'Sync your commits to Notion'
 branding:
   icon: 'refresh-cw'
   color: 'white'
+
+inputs:
+  notion_secret:
+    description: 'Notion secret is required'
+    required: true
+  notion_database:
+    description: 'Notion database ID is required'
+    required: true
+
 runs:
   using: 'node16'
   main: './index.js'
