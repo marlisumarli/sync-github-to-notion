@@ -28,6 +28,7 @@ async function main() {
                 commitId: commit.id
             });
         });
+        //
         Core.info('Success');
     } catch (error) {
         Core.setFailed(error);
