@@ -43,35 +43,31 @@ export class NotionApi {
                             name: commitBy
                         }
                     },
-                    // [Core.getInput('branch')]: {
-                    //     type: "select",
-                    //     select: [
-                    //         {
-                    //             name: branch
-                    //         }
-                    //     ]
-                    // },
-                    // [Core.getInput('commit_url')]: {
-                    //     url: commitUrl
-                    // },
-                    // [Core.getInput('project')]: {
-                    //     type: "multi_select",
-                    //     multi_select: [
-                    //         {
-                    //             name: project
-                    //         }
-                    //     ]
-                    // },
-                    // [Core.getInput('commit_id')]: {
-                    //     rich_text: [
-                    //         {
-                    //             type: "text",
-                    //             text: {
-                    //                 content: commitId,
-                    //             },
-                    //         },
-                    //     ],
-                    // }
+                    [Core.getInput('branch')]: {
+                        type: "select",
+                        select: {
+                            name: branch
+                        }
+                    },
+                    [Core.getInput('commit_url')]: {
+                        url: commitUrl
+                    },
+                    [Core.getInput('project')]: {
+                        type: "select",
+                        select: {
+                            name: project
+                        }
+                    },
+                    [Core.getInput('commit_id')]: {
+                        rich_text: [
+                            {
+                                type: "text",
+                                text: {
+                                    content: commitId,
+                                },
+                            },
+                        ],
+                    }
                 },
             });
         } catch (error) {
